@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q72-vM-SFV">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="2SN-lY-6iu">
+                                <rect key="frame" x="115.33333333333333" y="375.33333333333331" width="162.33333333333337" height="101.66666666666669"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kr9-dO-tTd">
+                                        <rect key="frame" x="41.666666666666671" y="0.0" width="79" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Legacy"/>
+                                        <connections>
+                                            <segue destination="RPy-WF-ycq" kind="show" id="vVT-Kn-5e4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pk7-LG-Dii">
+                                        <rect key="frame" x="0.0" y="67.333333333333371" width="162.33333333333334" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Swift concurrency"/>
+                                        <connections>
+                                            <segue destination="Fe1-pp-5wI" kind="show" id="zyB-aG-Xcg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2SN-lY-6iu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VdC-cm-t5e"/>
+                            <constraint firstItem="2SN-lY-6iu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pDe-kA-XY9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qVV-G2-3Zh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860.30534351145036" y="-6.3380281690140849"/>
+        </scene>
+        <!--Legacy-->
+        <scene sceneID="vJO-86-8lU">
+            <objects>
+                <viewController id="RPy-WF-ycq" customClass="LegacyViewController" customModule="AlamofireWithSwiftConcurrency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V9z-5M-4eJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cfC-Ib-h9S">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RPy-WF-ycq" id="vnQ-tm-7Ro"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZAx-sW-rL6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cfC-Ib-h9S" firstAttribute="leading" secondItem="ZAx-sW-rL6" secondAttribute="leading" id="7UK-xC-2Bk"/>
+                            <constraint firstItem="ZAx-sW-rL6" firstAttribute="bottom" secondItem="cfC-Ib-h9S" secondAttribute="bottom" id="Pxa-Yr-QeB"/>
+                            <constraint firstItem="cfC-Ib-h9S" firstAttribute="top" secondItem="ZAx-sW-rL6" secondAttribute="top" id="hg8-YQ-Vpx"/>
+                            <constraint firstItem="ZAx-sW-rL6" firstAttribute="trailing" secondItem="cfC-Ib-h9S" secondAttribute="trailing" id="p1a-lv-dTq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Legacy" id="hVP-Zs-cSi"/>
+                    <connections>
+                        <outlet property="tableView" destination="cfC-Ib-h9S" id="39e-An-BUG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSw-io-JKw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="524" y="746"/>
+        </scene>
+        <!--Swift concurrency-->
+        <scene sceneID="DbA-wW-cLe">
+            <objects>
+                <viewController id="Fe1-pp-5wI" customClass="SwiftConcurrencyViewController" customModule="AlamofireWithSwiftConcurrency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lqQ-iu-ecG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="r7u-bb-vq1">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Fe1-pp-5wI" id="5gX-aM-TKi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RI2-pJ-NYt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r7u-bb-vq1" firstAttribute="leading" secondItem="RI2-pJ-NYt" secondAttribute="leading" id="78r-ol-NxG"/>
+                            <constraint firstItem="RI2-pJ-NYt" firstAttribute="bottom" secondItem="r7u-bb-vq1" secondAttribute="bottom" id="NID-w7-E2Z"/>
+                            <constraint firstItem="RI2-pJ-NYt" firstAttribute="trailing" secondItem="r7u-bb-vq1" secondAttribute="trailing" id="Oba-hD-Bfr"/>
+                            <constraint firstItem="r7u-bb-vq1" firstAttribute="top" secondItem="RI2-pJ-NYt" secondAttribute="top" id="c0B-cH-E2g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swift concurrency" id="wRa-Gv-7a2"/>
+                    <connections>
+                        <outlet property="tableView" destination="r7u-bb-vq1" id="VX7-3r-dZk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lua-wr-YFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="746"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wZX-JS-cx8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q72-vM-SFV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A3R-4B-AWY">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aDJ-qt-5Zs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4l-P5-Dpz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66.412213740458014" y="-6.3380281690140849"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
